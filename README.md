@@ -1,5 +1,5 @@
 # Next Profile Views Counter
-
+![badge](http://localhost:3000/api/views/my-username)
 
 Next Profile Views Counter is a lightweight solution to effortlessly count and showcase profile views. Powered by Next.js, it offers real-time tracking and an easily integrable badge display for your user profiles.
 
