@@ -1,6 +1,5 @@
 # Next Profile Views Counter
-![badge](http://localhost:3000/api/views/my-username?color=#ff5733&label=Visits&style=font-size:14px;&diagonalSize=15
-)
+![badge](https://next-profile-views-counter.vercel.app/api/views/my-username?color=#ff5733&label=Visits&style=font-size:14px;&diagonalSize=15)
 
 Next Profile Views Counter is a lightweight solution to effortlessly count and showcase profile views. Powered by Next.js, it offers real-time tracking and an easily integrable badge display for your user profiles.
 
@@ -22,8 +21,8 @@ diagonalSize: Diagonal size of the badge.
 
 Example:
 
-![badge](http://localhost:3000/api/views/my-username?color=#ff5733&label=Visits&style=font-size:14px;&diagonalSize=15
-)
+![badge](https://next-profile-views-counter.vercel.app/api/views/my-username?color=#ff5733&label=Visits&style=font-size:14px;&diagonalSize=15)
+
 
 # License:
 By contributing, you agree that your contributions will be licensed under its [MIT License](./LICENSE).
