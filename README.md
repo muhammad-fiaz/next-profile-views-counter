@@ -1,5 +1,6 @@
 # Next Profile Views Counter
-![badge](http://localhost:3000/api/views/my-username)
+![badge](http://localhost:3000/api/views/my-username?color=#ff5733&label=Visits&style=font-size:14px;&diagonalSize=15
+)
 
 Next Profile Views Counter is a lightweight solution to effortlessly count and showcase profile views. Powered by Next.js, it offers real-time tracking and an easily integrable badge display for your user profiles.
 
@@ -9,37 +10,37 @@ Next Profile Views Counter is a lightweight solution to effortlessly count and s
 - Built with efficiency using Next.js.
 - Easily integrable badge display for user profiles.
 
-## Getting Started
 
-First, run the development server:
+## Customization
+### Badge URL Parameters
+You can customize the badge by adjusting parameters in the badge URL. Here are the available parameters:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+color: Background color of the badge.
+label: The label text on the badge.
+style: Custom styles for the text on the badge.
+diagonalSize: Diagonal size of the badge.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Example:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+![badge](http://localhost:3000/api/views/my-username?color=#ff5733&label=Visits&style=font-size:14px;&diagonalSize=15
+)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# License:
+By contributing, you agree that your contributions will be licensed under its [MIT License](./LICENSE).
 
-## Learn More
+# Contributing:
+Thank you for your interest in contributing to Next Profile Views Counter!. check out the [Contributing Guide](./CONTRIBUTING.md) to get started.   
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Support Me
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<div align="center">
 
-## Deploy on Vercel
+<h5> <strong> 💰 You can help me improve more by offering a little support on any platform❤️</strong></h5>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/muhammadfiaz) [![Patreon](https://img.shields.io/badge/Patreon-F96854?style=for-the-badge&logo=patreon&logoColor=white)](https://patreon.com/muhammadfiaz) [![Ko-Fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/muhammadfiaz)
+[![Sponsor muhammad-fiaz](https://img.shields.io/badge/Sponsor-%231EAEDB.svg?&style=for-the-badge&logo=GitHub-Sponsors&logoColor=white)](https://github.com/sponsors/muhammad-fiaz)
+[![Open Collective Backer](https://img.shields.io/badge/Open%20Collective-Backer-%238CC84B?style=for-the-badge&logo=open-collective&logoColor=white)](https://opencollective.com/muhammadfiaz)
+</div>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Happy Coding 👨‍💻
