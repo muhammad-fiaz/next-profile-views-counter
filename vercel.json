@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/views/[username].ts": {
+      "maxDuration": 30
+    }
+  }
+}
