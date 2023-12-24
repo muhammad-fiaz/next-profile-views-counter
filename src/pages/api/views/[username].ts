@@ -1,6 +1,6 @@
 // src/pages/api/views/[username].ts
 import { NextApiRequest, NextApiResponse } from 'next';
-import { getDatabase } from '@/lib/postgres';
+import { connectToDatabase } from '@/lib/mongodb';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const { username, color, label, style, diagonalSize, theme, template, backgroundColor } = req.query as {
@@ -15,27 +15,28 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     };
 
     try {
-        // Get the PostgreSQL database instance
-        const pool = await getDatabase();
+        // Connect to MongoDB
+        const { db } = await connectToDatabase();
 
         // Find the user's count
-        const result = await pool.query('SELECT count FROM views WHERE username = $1', [username]);
-        const userCount = result.rows[0];
+        const collection = db.collection('views');
+        const result = await collection.findOne({ username });
+        const userCount = result ? result.count : 0;
 
         if (!userCount) {
             // If the user is not found, create a new entry
-            await pool.query('INSERT INTO views (username, count) VALUES ($1, 1) ON CONFLICT (username) DO NOTHING', [username]);
+            await collection.insertOne({ username, count: 1 });
         } else {
             // If the user exists, update the count and return the updated count
-            await pool.query('UPDATE views SET count = count + 1 WHERE username = $1', [username]);
+            await collection.updateOne({ username }, { $inc: { count: 1 } });
         }
 
         // Get the updated count after insert/update
-        const updatedResult = await pool.query('SELECT count FROM views WHERE username = $1', [username]);
-        const updatedUserCount = updatedResult.rows[0];
+        const updatedResult = await collection.findOne({ username });
+        const updatedUserCount = updatedResult ? updatedResult.count : 0;
 
         const badgeSVG = getBadgeSVG({
-            views: updatedUserCount ? updatedUserCount.count : 0,
+            views: updatedUserCount,
             color,
             label,
             style,
